@@ -1,5 +1,12 @@
 PlantillaSimple.zip
 PlantillaSimple
 practica2            
-ISEsegundaParte.odt
 practica4/parciales/*
+*.aux
+*.lof
+*.log
+*.lot
+*.pdf
+*.toc
+*.odt
+
