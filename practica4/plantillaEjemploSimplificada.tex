@@ -62,7 +62,47 @@ Ejecuto el programa con phoronix-test-suite y pregunto por los benchmarks dispon
 \centering
 \includegraphics{availabletests.jpg}
 \end{figure} 
+Ahora tengo que elegir 2 tests y ejecutarlos. Voy a elegir los 2 primeros: pts/ai-benchmark y pts/aircrack-ng. 
+Para el primero me ha avisado de que me faltan dependencias y se ha puesto a instalarlas: 
+\begin{figure}[H]
+\centering
+\includegraphics{deviam.jpg}
+\end{figure}
+Resultado: 
+\begin{figure}[H]
+\centering
+\includegraphics{resultado.jpg}
+\end{figure}
+Para la segunda benckmark me vuelve a decir que tengo que instalarlo y que para ello me faltan dependencias. Le vuelvo a pedir que lo haga, pero esta vez no consigue resolver las dependencias así que escojo en su lugar el tercer benckmark: pts/amg 
+Repito todo el proceso de antes, esta vez exitosamente. Lo vuelvo a ejecutar y este es el resultado: 
+\begin{figure}[H]
+\centering
+\includegraphics{resultado3.jpg}
+\end{figure}
+Es igual que el resultado anterior. 
 
-\subsection{Benchmars disponibles}
+\section{tras probar un test básico para una web, utilizaremos Jmeter para hacer un test sobre una aplicación que ejecuta sobre dos contenedores (uno para la BD y otro para la aplicación en sí). El código está disponible en https://github.com/davidPalomar-ugr/iseP4JMeter donde se dan detalles sobre cómo
+ejecutar la aplicación en una de nuestras máquinas virtuales. El test de Jmeter debe incluir los siguientes elementos:
+El test debe tener parametrizados el Host y el Puerto en el Test Plan (puede hacer referencia usando param)
+Debe hacer dos grupos de hebras distintos para simular el acceso de los alumnos y los administradores. Las credenciales de alumno y administrador se cogen de los archivos: alumnos.csv y administrador.csv respectivamente.
+Añadimos esperas aleatorias a cada grupo de hebras (Gaussian Random
+Timer)
+El login de alumno, su consulta de datos (recuperar datos alumno) y login del adminsitrador son peticiones HTTP.
+El muestreo para simular el acceso de los administradores lo debe coger el archivo apiAlumnos.log (usando un Acces Log Sampler)
+Use una expresión regular (Regular Expressión Extractor) para extraer el token JWT que hay que añadir a la cabecera de las peticiones (usando HTTP Header Manager)}
+En primer lugar instalo JMeter en Ubuntu. Para eso voy a necesitar docker y docker-compose, que instalo con apt. 
+Después clono el repositorio del profesor con git clone. 
+Hago sudo docker-compose up pero me dice que el servidor no está corriendo
+\begin{figure}[H]
+\centering
+\includegraphics{runin.jpg}
+\end{figure}
+Le hago sudo systemclt start docker y ya puedo hacerle docker compose up. 
+Este es el resultado: 
+\begin{figure}[H]
+\centering
+\includegraphics{rebuild.jpg}
+\end{figure}
+Hago sudo docker-compose build como me pide. Me sigue dando el error del espacio en disco. 
 
 \end{document}
