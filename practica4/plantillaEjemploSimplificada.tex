@@ -34,10 +34,34 @@
 
 %----------------------------------------------------------------------------------------
 %	Cuestión 1
-%----------------------------------------------------------------------------------------
+%------------------------------------------------https://linuxconfig.org/how-to-install-the-latest-phoronix-test-suite-on-ubuntu-18-04-bionic-beaver----------------------------------------
 
 \section{Una vez que haya indagado sobre los benchmarks disponibles, seleccione como mínimo dos de ellos y proceda a ejecutarlos en Ubuntu y CentOS.
 Comente las diferencias}
+
+Instalo phronix en Ubuntu siguiendo este tutorial "https://linuxconfig.org/how-to-install-the-latest-phoronix-test-suite-on-ubuntu-18-04-bionic-beaver"
+%\b{sudo apt install gdebi-core}
+%\b{sudo gdebo phoronix-test-suite_7.8.0_all.deb}
+Sin embargo, me da error 
+\begin{figure}[H]
+\centering
+\includegraphics{phroroerror.jpg}
+\end{figure} 
+Pruebo otra vez con la otra forma que dicen y esta vez funciona 
+\begin{figure}[H]
+\centering
+\includegraphics{pbien.jpg}
+\end{figure} 
+Me doy cuenta de que lo que he hecho antes era el segundo paso y no otro método a parte. Vuelvo a repetirlo para instalar el paquete. 
+\begin{figure}[H]
+\centering
+\includegraphics{gdebi.jpg}
+\end{figure} 
+Ejecuto el programa con phoronix-test-suite y pregunto por los benchmarks disponibles con phoronix-test-suite list-available-tests.  
+\begin{figure}[H]
+\centering
+\includegraphics{availabletests.jpg}
+\end{figure} 
 
 \subsection{Benchmars disponibles}
 
